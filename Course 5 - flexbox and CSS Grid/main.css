@@ -1,0 +1,29 @@
+#one {
+  background-color: tomato;
+}
+
+#two {
+  background-color: aqua;
+}
+
+#three {
+  background-color: orange;
+}
+
+.blogpost {
+  border-radius: 15px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.posts {
+  display: flex;
+  grid-column: span 4;
+  grid-gap: 10px;
+  height: 100px;
+}
+
+.main {
+  grid-column: span 4;
+}

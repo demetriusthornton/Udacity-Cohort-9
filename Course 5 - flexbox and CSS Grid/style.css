@@ -1,0 +1,60 @@
+@import "header.css";
+@import "footer.css";
+@import "main.css";
+
+/* Mobile screens */
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+header {
+  background-color: wheat;
+  grid-column: span 4;
+  padding: 25px 0;
+  height: 5vh;
+}
+
+body {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "header"
+    "main"
+    "post"
+    "footer";
+}
+
+footer {
+  grid-column: span 4;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.featured {
+  grid-column: span 4;
+}
+
+.featured h1 {
+  text-align: center;
+}
+
+.main {
+  grid-column: span 4;
+}
