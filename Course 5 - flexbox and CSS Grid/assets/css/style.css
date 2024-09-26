@@ -7,12 +7,35 @@
   body {
     font-size: 16px;
   }
+  .posts{
+  display:grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:;
+  height: 125px;
+  text-align: center;
 }
+    
 
 /* Tablets */
 @media screen and (min-width: 768px) {
   body {
     font-size: 18px;
+  }
+
+  .posts {
+    /* background-color: red; */
+    display:grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:;
+    height: 125px;
+    text-align: center;
+  }
+
+  .blogpost{
+ border-radius: 25px 0px 25px 0px;
+ 
   }
 }
 

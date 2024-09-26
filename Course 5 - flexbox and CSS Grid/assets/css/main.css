@@ -10,18 +10,19 @@
   background-color: orange;
 }
 
-.blogpost {
+/* .blogpost {
   border-radius: 15px;
   padding: 10px 0;
   text-align: center;
   width: 100%;
-}
+} */
 
 .posts {
-  display: flex;
   grid-column: span 4;
+  grid-auto-rows: auto;
   grid-gap: 10px;
   height: 100px;
+  margin-bottom: ;
 }
 
 .main {
