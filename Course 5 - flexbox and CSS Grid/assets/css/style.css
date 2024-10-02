@@ -1,22 +1,80 @@
-@import "header.css";
-@import "footer.css";
-@import "main.css";
+a {
+  color: black;
+  font-size: 20px;
+}
+
+body {
+  background-color: aqua;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "one two three"
+    "footer footer footer";
+}
 
 header {
+  background-color: wheat;
+  font-size: 22px;
+  padding: 45px;
+  text-align: center;
   grid-area: header;
-}
-article {
-  grid-area: article;
-}
-
-main {
-  grid-area: Main;
 }
 
 footer {
+  background-color: wheat;
+  font-size: 22px;
+  padding: 45px;
+  text-align: center;
   grid-area: footer;
 }
 
-nav {
-  grid-area: nav;
+.Main-content {
+  grid-area: main;
+}
+.Main-content h1 {
+  text-align: center;
+}
+
+.Main-content p {
+  font-size: 20px;
+  color: black;
+}
+
+#postone {
+  grid-area: one;
+  background-color: azure;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#postone p {
+  color: black;
+}
+
+#posttwo {
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  grid-area: two;
+  text-align: center;
+}
+
+#posttwo h2,
+p {
+  color: white;
+}
+
+#postthree {
+  text-align: center;
+  grid-area: three;
+  background-color: red;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#postthree p {
+  color: black;
+  font-size: 18px;
 }
