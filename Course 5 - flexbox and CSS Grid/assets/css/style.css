@@ -4,7 +4,7 @@ a {
 }
 
 body {
-  background-color: aqua;
+  background-color: ;
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(3, 1fr);
@@ -12,7 +12,8 @@ body {
     "header header header"
     "main main main"
     "one two three"
-    "footer footer footer";
+    "footer footer footer"
+    "ig threads link";
 }
 
 header {
@@ -45,7 +46,7 @@ footer {
 
 #postone {
   grid-area: one;
-  background-color: azure;
+  background-color: thistle;
   border-radius: 10px;
   text-align: center;
 }
@@ -77,4 +78,20 @@ p {
 #postthree p {
   color: black;
   font-size: 18px;
+}
+
+.follow {
+  font-size: 20px;
+  text-align: center;
+}
+#ig {
+  padding: 20px;
+}
+
+#threads {
+  padding: 120px9px;
+}
+
+#link {
+  padding: 20px;
 }
