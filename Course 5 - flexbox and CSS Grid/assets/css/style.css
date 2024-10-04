@@ -1,84 +1,27 @@
-/* Mobile Phone Design */
-
-@media (max-width: 833px) {
-  body {
-    background-color: chocolate;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "one"
-      "two"
-      "three"
-      "footer";
-  }
-  main {
-    background-color: white;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "one"
-      "two"
-      "three";
-  }
-}
-
-article {
-  background-color: blue;
-}
-
-/* Tablet Design */
-@media (min-width: 834px) {
-  body {
-    background-color: blueviolet;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      "header header"
-      "main   main"
-      "one    two"
-      "three  three"
-      "footer footer";
-  }
-}
-
-/* Laptop Design */
-@media (min-width: 1440px) {
-  body {
-    background-color: aqua;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-      "header header header"
-      "main   main   main"
-      "one    two    three"
-      "footer footer footer";
-  }
-}
-
-a {
-  color: black;
-  font-size: 24px;
-  padding-left: 15px;
-}
-
+/* Base Layout */
 body {
-  background-color: ;
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas:
-    "header header header"
-    "main main main"
-    "one two three"
-    "footer footer footer"
-    "ig threads link";
+  gap: 20px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
 }
 
+/* Header & Footer */
 header {
   background-color: wheat;
   padding: 45px;
   text-align: center;
   grid-area: header;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 footer {
@@ -88,66 +31,142 @@ footer {
   grid-area: footer;
 }
 
-.Main-content {
-  grid-area: main;
-  height: 100%;
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
-.Main-content h1 {
-  text-align: center;
+/* Main Content */
+main {
+  grid-area: main;
+  display: grid;
+  gap: 20px;
 }
 
-.Main-content p {
-  font-size: 20px;
-  color: black;
+/* Article Styles */
+article {
+  border-radius: 10px;
+  padding: 20px;
 }
 
 #postone {
-  grid-area: one;
   background-color: thistle;
-  border-radius: 10px;
-  text-align: center;
+  grid-area: postone;
 }
 
-#postone p {
-  color: black;
+#postone h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 
 #posttwo {
   background-color: rebeccapurple;
-  border-radius: 10px;
-  grid-area: two;
-  text-align: center;
 }
 
 #posttwo h2,
-p {
+#posttwo p {
   color: white;
+  grid-area: posttwo;
 }
 
 #postthree {
-  text-align: center;
-  grid-area: three;
   background-color: red;
-  border-radius: 10px;
+  grid-area: postthree;
 }
 
-#postthree p {
-  color: black;
-  font-size: 18px;
+#postfour {
+  background-color: orange;
+  grid-area: postfour;
 }
 
-.follow {
-  font-size: 20px;
+/* Typography */
+h2 {
+  text-decoration: underline;
   text-align: center;
-}
-#ig {
-  padding: 20px;
+  padding-top: 10px;
 }
 
-#threads {
-  padding: 120px9px;
+p {
+  font-size: 18px;
+  text-align: left;
+  padding: 14px;
+  color: black;
 }
 
-#link {
-  padding: 20px;
+a {
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Social Links */
+section nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Media Queries */
+/* Mobile Layout */
+@media (max-width: 833px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "postone"
+      "posttwo"
+      "postthree"
+      "postfour";
+  }
+}
+
+/* Tablet Layout */
+@media (min-width: 834px) and (max-width: 1439px) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "postone postone"
+      "posttwo postthree"
+      "postfour postfour";
+  }
+}
+
+/* Desktop Layout */
+@media (min-width: 1440px) {
+  body {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "postone postone postone"
+      "posttwo postthree postfour";
+  }
 }
