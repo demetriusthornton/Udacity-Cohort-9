@@ -1,6 +1,64 @@
+/* Mobile Phone Design */
+
+@media (max-width: 833px) {
+  body {
+    background-color: chocolate;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "one"
+      "two"
+      "three"
+      "footer";
+  }
+  main {
+    background-color: white;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "one"
+      "two"
+      "three";
+  }
+}
+
+article {
+  background-color: blue;
+}
+
+/* Tablet Design */
+@media (min-width: 834px) {
+  body {
+    background-color: blueviolet;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "header header"
+      "main   main"
+      "one    two"
+      "three  three"
+      "footer footer";
+  }
+}
+
+/* Laptop Design */
+@media (min-width: 1440px) {
+  body {
+    background-color: aqua;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "header header header"
+      "main   main   main"
+      "one    two    three"
+      "footer footer footer";
+  }
+}
+
 a {
   color: black;
-  font-size: 20px;
+  font-size: 24px;
+  padding-left: 15px;
 }
 
 body {
@@ -18,7 +76,6 @@ body {
 
 header {
   background-color: wheat;
-  font-size: 22px;
   padding: 45px;
   text-align: center;
   grid-area: header;
@@ -26,14 +83,14 @@ header {
 
 footer {
   background-color: wheat;
-  font-size: 22px;
-  padding: 45px;
+  padding: 25px;
   text-align: center;
   grid-area: footer;
 }
 
 .Main-content {
   grid-area: main;
+  height: 100%;
 }
 .Main-content h1 {
   text-align: center;
@@ -72,7 +129,6 @@ p {
   grid-area: three;
   background-color: red;
   border-radius: 10px;
-  padding: 10px;
 }
 
 #postthree p {
