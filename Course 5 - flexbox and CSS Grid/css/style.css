@@ -1,0 +1,180 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Layout */
+body {
+  display: grid;
+  gap: 20px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Header & Footer */
+header {
+  background-color: wheat;
+  padding: 45px;
+  text-align: center;
+  grid-area: header;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer {
+  background-color: wheat;
+  padding: 25px;
+  text-align: center;
+  grid-area: footer;
+}
+
+footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Main Content */
+main {
+  grid-area: main;
+  display: grid;
+  gap: 20px;
+}
+
+/* Article Styles */
+article {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#postone {
+  background-color: thistle;
+  grid-area: postone;
+}
+
+#postone h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#posttwo {
+  background-color: rebeccapurple;
+  grid-area: posttwo;
+}
+
+#posttwo h2,
+#posttwo p {
+  color: white;
+}
+
+#postthree {
+  background-color: red;
+  grid-area: postthree;
+}
+
+#postfour {
+  background-color: orange;
+  grid-area: postfour;
+}
+
+/* Typography */
+h2 {
+  text-decoration: underline;
+  text-align: center;
+  padding-top: 10px;
+}
+
+p {
+  font-size: 18px;
+  text-align: left;
+  padding: 14px;
+  color: black;
+}
+
+a {
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Social Links */
+section nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Media Queries */
+/* Mobile Layout */
+@media (max-width: 833px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "postone"
+      "posttwo"
+      "postthree"
+      "postfour";
+  }
+}
+
+/* Tablet Layout */
+@media (min-width: 834px) and (max-width: 1439px) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+  }
+
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "postone postone"
+      "posttwo postthree"
+      "postfour postfour";
+  }
+}
+
+/* Desktop Layout */
+@media (min-width: 1440px) {
+  body {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "footer footer footer";
+  }
+
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "postone postone postone"
+      "posttwo postthree postfour";
+  }
+}
